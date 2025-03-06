@@ -73,26 +73,3 @@ div {
     background: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-
-ul {
-    list-style-position: inside;
-    padding-left: 0;
-    text-align: center;
-}
-
-ul li {
-    display: inline-block;
-    text-align: left;
-    width: fit-content;
-}
-
-
-footer {
-    margin-top: 20px;
-    padding: 15px;
-    background: #222;
-    color: white;
-    font-size: 14px;
-    border-top: 3px solid #f4a261;
-}
