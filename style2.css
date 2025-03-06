@@ -83,7 +83,7 @@ footer {
     border-top: 3px solid #f4a261;
 }
 
-ul {
+#courses ul {
     list-style-type: disc;
     /* Ensures bullets appear */
     padding-left: 20px;
@@ -92,7 +92,7 @@ ul {
     /* Aligns text properly */
 }
 
-li {
+#courses li {
     margin: 5px 0;
     /* Adds spacing between list items */
 }
