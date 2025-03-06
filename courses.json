@@ -4,66 +4,66 @@
             "year": "1st Year",
             "semester": "1st Semester",
             "subjects": [
+                "Reserve Officers' Training Corps 1",
                 "Introduction to Computing",
-                "Programming 1",
-                "Mathematics for Computing",
-                "English Communication 1",
-                "Physical Education 1"
+                "Computer Programing 1",
+                "Purposive Communication",
+                "Readings in Philippine History",
+                "The Contemporary World",
+                "Mathematics in the Modern World",
+                "Movement Enhancement"
             ]
         },
         {
             "year": "1st Year",
             "semester": "2nd Semester",
             "subjects": [
-                "Data Structures",
-                "Programming 2",
+                "Science, Technology and Society",
+                "Reserve Officer Training Corps 2",
+                "Computer Programing 2",
+                "Data Structures and Algorithms",
                 "Discrete Mathematics",
-                "English Communication 2",
-                "Physical Education 2"
+                "Art Appreciation",
+                "Understanding the Self",
+                "Fitness Activity and Exercises"
             ]
         },
         {
             "year": "2nd Year",
             "semester": "1st Semester",
             "subjects": [
-                "Object-Oriented Programming",
-                "Database Management Systems",
-                "Computer Organization",
-                "Technical Writing",
-                "Physical Education 3"
+                "Intro to Human Computer Interaction",
+                "Fundamentals of Database Systems",
+                "Platform Technologies",
+                "Object Oriented Programming",
+                "Accounting Principles",
+                "Physical Activity Towards Health and Fitness 1",
+                "Environmental Science"
             ]
         },
         {
             "year": "2nd Year",
             "semester": "2nd Semester",
             "subjects": [
-                "Web Development",
-                "Operating Systems",
+                "Information Management",
+                "Networking 1",
+                "Web Systems and Technolgies",
+                "Systems Integration and Architecture",
+                "Ethics",
+                "Life and Works of Rizal",
+                "Physical Activity Towards Health and Fitness 2"
+            ]
+        },
+        {
+            "year": "3rd Year",
+            "semester": "1st Semester",
+            "subjects": [
+                "Information Assurance and Security",
+                "Networking 2",
+                "Mobile Programming",
                 "Software Engineering",
-                "Networking Fundamentals",
-                "Physical Education 4"
-            ]
-        },
-        {
-            "year": "3rd Year",
-            "semester": "1st Semester",
-            "subjects": [
-                "Advanced Database Systems",
-                "Mobile App Development",
-                "Computer Security",
-                "Artificial Intelligence",
-                "Professional Ethics"
-            ]
-        },
-        {
-            "year": "3rd Year",
-            "semester": "2nd Semester",
-            "subjects": [
-                "Cloud Computing",
-                "Machine Learning",
-                "Embedded Systems",
-                "Capstone Project 1",
-                "Internship Preparation"
+                "IT Elective 1",
+                "Technopreneurship"
             ]
         }
     ]
