@@ -23,6 +23,7 @@ function displayCourses(courses) {
         const courseDiv = document.createElement("div");
         courseDiv.classList.add("course");
 
+        // Properly use template literals
         courseDiv.innerHTML = `
             <h3>${course.year} - ${course.semester}</h3>
             <ul>
