@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #eef2f3;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #f4a261;
+}
+
+/* Profile Image */
+.image-section {
+    margin: 30px auto;
+}
+
+.image-section img {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+.page-content {
+    margin: 30px auto;
+    width: 80%;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #222;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+div {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Improved Search Bar */
+#search-input {
+    width: 80%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 10px auto;
+    display: block;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    text-align: center;
+}
+
+#search-input:focus {
+    border-color: #f4a261;
+    box-shadow: 0 0 10px rgba(244, 162, 97, 0.5);
+}
+
+/* Course List */
+#course-list {
+    list-style: none;
+    padding: 0;
+}
+
+.course {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.course:hover {
+    transform: translateY(-5px);
+}
+
+.course h3 {
+    color: #222;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.course ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course ul li {
+    background: #f4a261;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 15px;
+    background: #222;
+    color: white;
+    font-size: 14px;
+    border-top: 3px solid #f4a261;
+}
