@@ -17,37 +17,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function displayCourses(courses) {
     const coursesContainer = document.getElementById("courses");
-    coursesContainer.innerHTML = `
-        <h2>My Finished Courses</h2>
-        <input type="text" id="search-input" placeholder="Search subjects..." />
-        <ul id="course-list"></ul>
-    `;
+    coursesContainer.innerHTML = "<h2>My Finished Courses</h2>";
 
-    const searchInput = document.getElementById("search-input");
-    const courseList = document.getElementById("course-list");
+    courses.forEach(course => {
+        const courseDiv = document.createElement("div");
+        courseDiv.classList.add("course");
 
-    function updateCourseList(filteredCourses) {
-        courseList.innerHTML = "";
-        filteredCourses.forEach(course => {
-            const courseDiv = document.createElement("div");
-            courseDiv.classList.add("course");
-            courseDiv.innerHTML = `
-                <h3>${course.year} - ${course.semester}</h3>
-                <ul>
-                    ${course.subjects.map(subject => `<li>${subject}</li>`).join("")}
-                </ul>
-            `;
-            courseList.appendChild(courseDiv);
-        });
-    }
+        courseDiv.innerHTML = `
+            <h3>${course.year} - ${course.semester}</h3>
+            <ul>
+                ${course.subjects.map(subject => `<li>${subject}</li>`).join("")}
+            </ul>
+        `;
 
-    updateCourseList(courses);
-
-    searchInput.addEventListener("input", () => {
-        const searchTerm = searchInput.value.toLowerCase();
-        const filteredCourses = courses.filter(course =>
-            course.subjects.some(subject => subject.toLowerCase().includes(searchTerm))
-        );
-        updateCourseList(filteredCourses);
+        coursesContainer.appendChild(courseDiv);
     });
 }
