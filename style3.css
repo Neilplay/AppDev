@@ -93,8 +93,8 @@ div {
 }
 
 #search-input:focus {
-    border-color: #f4a261;
-    box-shadow: 0 0 10px rgba(244, 162, 97, 0.5);
+    border-color: #222;
+    box-shadow: 0 0 10px rgba(10, 9, 8, 0.5);
 }
 
 /* Course List */
