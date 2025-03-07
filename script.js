@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.createElement("input");
+    searchInput.setAttribute("type", "text");
+    searchInput.setAttribute("id", "search-box");
+    searchInput.setAttribute("placeholder", "Search for a subject...");
+    searchInput.addEventListener("input", filterSubjects);
+
+    const coursesContainer = document.getElementById("courses");
+    coursesContainer.prepend(searchInput);
+
     fetch("courses.json")
         .then(response => {
             if (!response.ok) {
@@ -11,13 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => {
             console.error("Error fetching JSON:", error);
-            document.getElementById("courses").innerHTML = "<p>Failed to load courses.</p>";
+            coursesContainer.innerHTML = "<p>Failed to load courses.</p>";
         });
 });
 
 function displayCourses(courses) {
     const coursesContainer = document.getElementById("courses");
-    coursesContainer.innerHTML = "<h2>My Finished Courses</h2>";
+    coursesContainer.innerHTML += "<h2>My Finished Courses</h2>";
 
     courses.forEach(course => {
         const courseDiv = document.createElement("div");
@@ -26,10 +35,23 @@ function displayCourses(courses) {
         courseDiv.innerHTML = `
             <h3>${course.year} - ${course.semester}</h3>
             <ul>
-                ${course.subjects.map(subject => `<li>${subject}</li>`).join("")}
+                ${course.subjects.map(subject => `<li class="subject">${subject}</li>`).join("")}
             </ul>
         `;
 
         coursesContainer.appendChild(courseDiv);
+    });
+}
+
+function filterSubjects() {
+    const searchTerm = document.getElementById("search-box").value.toLowerCase();
+    const subjects = document.querySelectorAll(".subject");
+
+    subjects.forEach(subject => {
+        if (subject.textContent.toLowerCase().includes(searchTerm)) {
+            subject.style.display = "list-item";
+        } else {
+            subject.style.display = "none";
+        }
     });
 }
