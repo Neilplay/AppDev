@@ -20,8 +20,6 @@ function displayCourses(courses) {
     coursesContainer.innerHTML = "<h2>My Finished Courses</h2>";
 
     const searchInput = document.getElementById("search-input");
-
-    // Move the event listener setup outside of displayCourses
     searchInput.addEventListener("input", () => {
         const searchTerm = searchInput.value.toLowerCase();
         const filteredCourses = courses.filter(course =>
@@ -31,8 +29,9 @@ function displayCourses(courses) {
     });
 
 
-    // Display courses after setting up the search input listener
+
     courses.forEach(course => {
+
 
         const courseDiv = document.createElement("div");
         courseDiv.classList.add("course");
