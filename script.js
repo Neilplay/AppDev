@@ -9,12 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     coursesContainer.prepend(searchInput);
 
     fetch("courses.json")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Failed to load JSON file");
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
             displayCourses(data.courses);
         })
@@ -32,11 +27,11 @@ function displayCourses(courses) {
         const courseDiv = document.createElement("div");
         courseDiv.classList.add("course");
 
+        const subjectList = course.subjects.map(subject => `<li class="subject">${subject}</li>`).join("");
+
         courseDiv.innerHTML = `
             <h3>${course.year} - ${course.semester}</h3>
-            <ul>
-                ${course.subjects.map(subject => `<li class="subject">${subject}</li>`).join("")}
-            </ul>
+            <ul>${subjectList}</ul>
         `;
 
         coursesContainer.appendChild(courseDiv);
@@ -45,13 +40,22 @@ function displayCourses(courses) {
 
 function filterSubjects() {
     const searchTerm = document.getElementById("search-box").value.toLowerCase();
-    const subjects = document.querySelectorAll(".subject");
+    const courseDivs = document.querySelectorAll(".course");
 
-    subjects.forEach(subject => {
-        if (subject.textContent.toLowerCase().includes(searchTerm)) {
-            subject.style.display = "list-item";
-        } else {
-            subject.style.display = "none";
-        }
+    courseDivs.forEach(courseDiv => {
+        const subjects = courseDiv.querySelectorAll(".subject");
+        let courseMatches = false;
+
+        subjects.forEach(subject => {
+            if (subject.textContent.toLowerCase().includes(searchTerm)) {
+                subject.style.display = "list-item";
+                courseMatches = true;
+            } else {
+                subject.style.display = "none";
+            }
+        });
+
+        // Hide the entire course div if no subjects match
+        courseDiv.style.display = courseMatches ? "block" : "none";
     });
 }
